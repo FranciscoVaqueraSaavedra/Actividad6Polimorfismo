@@ -1,17 +1,29 @@
 #include <iostream>
-
-#include "sum.h"
-#include "sub.h"
-#include "div.h"
-#include "mul.h"
-
-using std::cout;
+#include "Suma.h"
+#include "Resta.h"
+#include "Multiplicacion.h"
+#include "Division.h"
 
 int main() {
+    double a = 10, b = 2;
 
-    std::cout << "sum(1, 5) = " << sum(1, 5) << '\n';
-    std::cout << "sub(5, 1) = " << sub(5, 1) << '\n';
-    std::cout << "div(9, 3) = " << divide(9, 3) << '\n';
-    std::cout << "mul(7, 3) = " << mul(7, 3) << '\n';
+    Operacion* operacion;
+
+    operacion = new Suma();
+    std::cout << "Suma: " << operacion->calcular(2, 5) << std::endl;
+    delete operacion;
+
+    operacion = new Resta();
+    std::cout << "Resta: " << operacion->calcular(10, 2) << std::endl;
+    delete operacion;
+
+    operacion = new Multiplicacion();
+    std::cout << "Multiplicacion: " << operacion->calcular(5, 5) << std::endl;
+    delete operacion;
+
+    operacion = new Division();
+    std::cout << "Division: " << operacion->calcular(90, 9) << std::endl;
+    delete operacion;
+
     return 0;
 }

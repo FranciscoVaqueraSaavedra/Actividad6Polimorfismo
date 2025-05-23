@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "div.h"
+#include "Division.h"
 
 TEST(DivTest, HandlesPositiveInput)
 {

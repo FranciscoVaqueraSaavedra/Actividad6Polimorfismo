@@ -14,10 +14,12 @@ include_directories(${CMAKE_SOURCE_DIR})
 # Archivos fuente principales
 set(SOURCES
         main.cpp
-        sum.h
-        sub.h
-        div.h
-        mul.h
+        Suma.h
+        Resta.h
+        Division.h
+        Multiplicacion.h
+        Operacion.cpp
+        Operacion.h
 )
 
 # Crear el ejecutable principal

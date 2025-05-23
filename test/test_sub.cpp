@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "sub.h"
+#include "Resta.h"
 
 TEST(SubTest, HandlesPositiveInput)
 {

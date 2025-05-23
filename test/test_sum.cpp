@@ -1,5 +1,5 @@
 #include <gtest/gtest.h>
-#include "sum.h"
+#include "Suma.h"
 
 TEST(SumTest, HandlesPositiveInput)
 {
