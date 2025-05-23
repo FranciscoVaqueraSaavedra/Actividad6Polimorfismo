@@ -2,16 +2,17 @@
 #define DIVISION_H
 
 #include "Operacion.h"
+#include <stdexcept>
 
 class Division : public Operacion {
 public:
     Division(double op1, double op2) : Operacion(op1, op2) {}
 
-    double calcular() override {
-        if (operando2 != 0)
-            return operando1 / operando2;
-        else
-            return 0; // o lanzar excepción
+    double calcular() const override {
+        if (operando2 == 0) {
+            throw std::runtime_error("Error: División entre cero");
+        }
+        return operando1 / operando2;
     }
 };
 

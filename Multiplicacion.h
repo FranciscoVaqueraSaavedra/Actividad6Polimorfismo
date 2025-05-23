@@ -7,7 +7,7 @@ class Multiplicacion : public Operacion {
 public:
     Multiplicacion(double op1, double op2) : Operacion(op1, op2) {}
 
-    double calcular() override {
+    double calcular() const override {
         return operando1 * operando2;
     }
 };

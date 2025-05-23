@@ -4,24 +4,20 @@
 #include "Multiplicacion.h"
 #include "Division.h"
 
+void realizarOperacion(Operacion* op, const std::string& nombre) {
+    try {
+        std::cout << nombre << ": " << op->calcular() << std::endl;
+    } catch (const std::exception& e) {
+        std::cout << nombre << ": " << e.what() << std::endl;
+    }
+    delete op;
+}
+
 int main() {
-    Operacion* op;
-
-    op = new Suma(10, 5);
-    std::cout << "Suma: " << op->calcular() << std::endl;
-    delete op;
-
-    op = new Resta(23, 5);
-    std::cout << "Resta: " << op->calcular() << std::endl;
-    delete op;
-
-    op = new Multiplicacion(7, 3);
-    std::cout << "Multiplicacion: " << op->calcular() << std::endl;
-    delete op;
-
-    op = new Division(90, 10);
-    std::cout << "Division: " << op->calcular() << std::endl;
-    delete op;
+    realizarOperacion(new Suma(12, 5), "Suma");
+    realizarOperacion(new Resta(20, 13), "Resta");
+    realizarOperacion(new Multiplicacion(11, 4), "Multiplicacion");
+    realizarOperacion(new Division(27, 3), "Division");
 
     return 0;
 }
