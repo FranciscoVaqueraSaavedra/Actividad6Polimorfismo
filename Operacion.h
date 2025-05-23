@@ -1,18 +1,18 @@
-//
-// Created by Franc on 22/05/2025.
-//
-
 #ifndef OPERACION_H
 #define OPERACION_H
 
-
-
 class Operacion {
+protected:
+    double operando1;
+    double operando2;
+
 public:
-    virtual double calcular(double a, double b) = 0;
-    virtual ~Operacion() = default;
+    Operacion(double op1, double op2) : operando1(op1), operando2(op2) {}
+
+    // Método virtual para sobrescribir
+    virtual double calcular() {
+        return 0.0;  // Por defecto no hace nada
+    }
 };
 
-
-
-#endif //OPERACION_H
+#endif

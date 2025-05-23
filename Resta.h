@@ -5,8 +5,10 @@
 
 class Resta : public Operacion {
 public:
-    double calcular(double a, double b) override {
-        return a - b;
+    Resta(double op1, double op2) : Operacion(op1, op2) {}
+
+    double calcular() override {
+        return operando1 - operando2;
     }
 };
 
